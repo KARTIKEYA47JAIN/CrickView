@@ -466,6 +466,22 @@ st.markdown("<h1 style='text-align: center; color: black;'>CrickView</h1>", unsa
 # Adding a line between Title and content
 st.markdown("***")
 
+# Removing footer
+st.markdown(
+    """
+    <style>
+    .css-1rs6os.edgvbvh3
+    {
+        visibility: hidden;
+    }
+    .css-1lsmgbg.egzxvld0
+    {
+        visibility: hidden;
+    }
+    </style>
+    """, unsafe_allow_html=True
+)
+
 # Selecting Player name
 with st.sidebar:
     with st.spinner("Loading..."):
@@ -1245,19 +1261,3 @@ with opt_5:
 
                 # Display the styled HTML table
                 st.write(styled_html_IPL, unsafe_allow_html=True)
-                
-# Removing footer
-st.markdown(
-    """
-    <style>
-    .css-1rs6os.edgvbvh3
-    {
-        visibility: hidden;
-    }
-    .css-1lsmgbg.egzxvld0
-    {
-        visibility: hidden;
-    }
-    </style>
-    """, unsafe_allow_html=True
-)
