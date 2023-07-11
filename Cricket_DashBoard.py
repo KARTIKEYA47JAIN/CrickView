@@ -1245,3 +1245,19 @@ with opt_5:
 
                 # Display the styled HTML table
                 st.write(styled_html_IPL, unsafe_allow_html=True)
+                
+# Removing footer
+st.markdown(
+    """
+    <style>
+    .css-1rs6os.edgvbvh3
+    {
+        visibility: hidden;
+    }
+    .css-1lsmgbg.egzxvld0
+    {
+        visibility: hidden;
+    }
+    </style>
+    """, unsafe_allow_html=True
+)
