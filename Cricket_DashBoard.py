@@ -428,15 +428,15 @@ def Catch_Stumpings():
             catch.append({'format': format_name, 'catch': catch_stumpings[0]})
             stumpings.append({'format': format_name, 'stumpings': catch_stumpings[1]})
             
-            try:
-                catches = [int(item['catch']) for item in catch]
-            except ValueError:
-                catches = [not_played if item['catch'] == special_char else item['catch'] for item in catch]
+        try:
+            catches = [int(item['catch']) for item in catch]
+        except ValueError:
+            catches = [not_played if item['catch'] == special_char else item['catch'] for item in catch]
             
-            try:
-                stumps = [int(item['stumpings']) for item in stumpings]
-            except ValueError:
-                stumps = [not_played if item['stumpings'] == special_char else item['stumpings'] for item in stumpings]
+        try:
+            stumps = [int(item['stumpings']) for item in stumpings]
+        except ValueError:
+            stumps = [not_played if item['stumpings'] == special_char else item['stumpings'] for item in stumpings]
                 
     elif 'LA' in career_df:
         labels = ['Test', 'ODI', 'FC', 'LA']
@@ -446,15 +446,15 @@ def Catch_Stumpings():
             catch.append({'format': format_name, 'catch': catch_stumpings[0]})
             stumpings.append({'format': format_name, 'stumpings': catch_stumpings[1]})
             
-            try:
-                catches = [int(item['catch']) for item in catch]
-            except ValueError:
-                catches = [not_played if item['catch'] == special_char else item['catch'] for item in catch]
+         try:
+            catches = [int(item['catch']) for item in catch]
+        except ValueError:
+            catches = [not_played if item['catch'] == special_char else item['catch'] for item in catch]
             
-            try:
-                stumps = [int(item['stumpings']) for item in stumpings]
-            except ValueError:
-                stumps = [not_played if item['stumpings'] == special_char else item['stumpings'] for item in stumpings]
+        try:
+            stumps = [int(item['stumpings']) for item in stumpings]
+        except ValueError:
+            stumps = [not_played if item['stumpings'] == special_char else item['stumpings'] for item in stumpings]
                 
     elif 'IPL' in career_df:
         labels = ['Test', 'ODI', 'T20I', 'IPL']
@@ -464,16 +464,16 @@ def Catch_Stumpings():
             catch.append({'format': format_name, 'catch': catch_stumpings[0]})
             stumpings.append({'format': format_name, 'stumpings': catch_stumpings[1]})
             
-            try:
-                catches = [int(item['catch']) for item in catch]
-            except ValueError:
-                catches = [not_played if item['catch'] == special_char else item['catch'] for item in catch]
+        try:
+            catches = [int(item['catch']) for item in catch]
+        except ValueError:
+            catches = [not_played if item['catch'] == special_char else item['catch'] for item in catch]
             
-            try:
-                stumps = [int(item['stumpings']) for item in stumpings]
-            except ValueError:
-                stumps = [not_played if item['stumpings'] == special_char else item['stumpings'] for item in stumpings]
-                
+        try:
+            stumps = [int(item['stumpings']) for item in stumpings]
+        except ValueError:
+            stumps = [not_played if item['stumpings'] == special_char else item['stumpings'] for item in stumpings]
+            
     else:
         labels = ['Test', 'ODI', 'FC', 'T20I']
         for format_name in labels:
@@ -482,15 +482,16 @@ def Catch_Stumpings():
             catch.append({'format': format_name, 'catch': catch_stumpings[0]})
             stumpings.append({'format': format_name, 'stumpings': catch_stumpings[1]})
             
-            try:
-                catches = [int(item['catch']) for item in catch]
-            except ValueError:
-                catches = [not_played if item['catch'] == special_char else item['catch'] for item in catch]
+        try:
+            catches = [int(item['catch']) for item in catch]
+        except ValueError:
+            catches = [not_played if item['catch'] == special_char else item['catch'] for item in catch]
             
-            try:
-                stumps = [int(item['stumpings']) for item in stumpings]
-            except ValueError:
-                stumps = [not_played if item['stumpings'] == special_char else item['stumpings'] for item in stumpings]
+        try:
+            stumps = [int(item['stumpings']) for item in stumpings]
+        except ValueError:
+            stumps = [not_played if item['stumpings'] == special_char else item['stumpings'] for item in stumpings]
+            
                 
     return catches, stumps, labels
 
