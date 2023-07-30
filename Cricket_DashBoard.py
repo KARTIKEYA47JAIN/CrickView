@@ -390,7 +390,9 @@ def Pie_Balls():
             five_wicket = [size if size != special_char else not_played for size in
                            [career_df['Test'][8], career_df['ODI'][8], career_df['T20I'][8], career_df['IPL'][8]]]
             ten_wicket = [size if size != special_char else not_played for size in
-                          [career_df['Test'][9], career_df['ODI'][9]
+                         [career_df['Test'][9], career_df['ODI'][9], career_df['T20I'][9], career_df['IPL'][9]]]
+            best_bowling = career_df['Test'][10], career_df['ODI'][10], career_df['T20I'][10], career_df['IPL'][10]
+            ball_label = ['Test', 'ODI', 'T20I', 'IPL']
         else:
             balls_bowled = [not_played if size == special_char else size.replace(',', '') if ',' in size else size for
                             size
