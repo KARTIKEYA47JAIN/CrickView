@@ -418,14 +418,7 @@ def Catch_Stumpings():
     catch = []
     stumpings = []
     not_played = 'Not Played'  # New value for the "-" entries
-    special_chars = ['-', '–']
-
-    def convert_to_int_or_not_played(value):
-    if value in special_chars:
-        return not_played
-    return int(value)
-
-    
+    special_chars = '–'
     career_df = Career()
     if 'T20' in career_df:
         labels = ['Test', 'ODI', 'T20', 'T20I']
@@ -434,8 +427,8 @@ def Catch_Stumpings():
             catch_stumpings = catch_stumpings[0].split('/')
             catch.append({'format': format_name, 'catch': catch_stumpings[0]})
             stumpings.append({'format': format_name, 'stumpings': catch_stumpings[1]})
-            catches = [convert_to_int_or_not_played(item['catch']) for item in catch]
-            stumps = [convert_to_int_or_not_played(item['stumpings']) for item in stumpings]
+            catches = [int(item['catch']) if item['catch'] != special_char else not_played for item in catch]
+            stumps = [int(item['stumpings']) if item['stumpings'] != special_char else not_played for item in stumpings]
     elif 'LA' in career_df:
         labels = ['Test', 'ODI', 'FC', 'LA']
         for format_name in labels:
@@ -443,8 +436,8 @@ def Catch_Stumpings():
             catch_stumpings = catch_stumpings[0].split('/')
             catch.append({'format': format_name, 'catch': catch_stumpings[0]})
             stumpings.append({'format': format_name, 'stumpings': catch_stumpings[1]})
-            catches = [convert_to_int_or_not_played(item['catch']) for item in catch]
-            stumps = [convert_to_int_or_not_played(item['stumpings']) for item in stumpings]
+            catches = [int(item['catch']) if item['catch'] != special_char else not_played for item in catch]
+            stumps = [int(item['stumpings']) if item['stumpings'] != special_char else not_played for item in stumpings]
     elif 'IPL' in career_df:
         labels = ['Test', 'ODI', 'T20I', 'IPL']
         for format_name in labels:
@@ -452,8 +445,8 @@ def Catch_Stumpings():
             catch_stumpings = catch_stumpings[0].split('/')
             catch.append({'format': format_name, 'catch': catch_stumpings[0]})
             stumpings.append({'format': format_name, 'stumpings': catch_stumpings[1]})
-            catches = [convert_to_int_or_not_played(item['catch']) for item in catch]
-            stumps = [convert_to_int_or_not_played(item['stumpings']) for item in stumpings]
+            catches = [int(item['catch']) if item['catch'] != special_char else not_played for item in catch]
+            stumps = [int(item['stumpings']) if item['stumpings'] != special_char else not_played for item in stumpings]
     else:
         labels = ['Test', 'ODI', 'FC', 'T20I']
         for format_name in labels:
@@ -461,8 +454,8 @@ def Catch_Stumpings():
             catch_stumpings = catch_stumpings[0].split('/')
             catch.append({'format': format_name, 'catch': catch_stumpings[0]})
             stumpings.append({'format': format_name, 'stumpings': catch_stumpings[1]})
-            catches = [convert_to_int_or_not_played(item['catch']) for item in catch]
-            stumps = [convert_to_int_or_not_played(item['stumpings']) for item in stumpings]
+            catches = [int(item['catch']) if item['catch'] != special_char else not_played for item in catch]
+            stumps = [int(item['stumpings']) if item['stumpings'] != special_char else not_played for item in stumpings]
                 
     return catches, stumps, labels
 
