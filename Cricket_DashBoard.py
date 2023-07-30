@@ -312,6 +312,20 @@ def Pie_Runs_Scored():
             half_century.append({'format': format_name, 'half_centuries': centuries_half_centuries[1]})
             cent = [int(item['centuries']) for item in century]
             half_cent = [int(item['half_centuries']) for item in half_century]
+    elif 'IPL' in career_df:
+        run_values = [career_df['Test'][1], career_df['ODI'][1], career_df['T20I'][1], career_df['IPL'][1]]
+        run_average = [career_df['Test'][2], career_df['ODI'][2], career_df['T20I'][2], career_df['IPL'][2]]
+        high_run = [career_df['Test'][4], career_df['ODI'][4], career_df['T20I'][4], career_df['IPL'][4]]
+        run_values = [int(size.replace(',', '')) for size in run_values]
+        run_labels = ['Test', 'ODI', 'T20I', 'IPL']
+        labels = ['Test', 'ODI', 'T20I', 'IPL']
+        for format_name in labels:
+            centuries_half_centuries = career_df.loc[career_df['Name'] == '100s/50s', format_name].values
+            centuries_half_centuries = centuries_half_centuries[0].split('/')
+            century.append({'format': format_name, 'centuries': centuries_half_centuries[0]})
+            half_century.append({'format': format_name, 'half_centuries': centuries_half_centuries[1]})
+            cent = [int(item['centuries']) for item in century]
+            half_cent = [int(item['half_centuries']) for item in half_century]
     else:
         run_values = [career_df['Test'][1], career_df['ODI'][1], career_df['FC'][1], career_df['T20I'][1]]
         run_average = [career_df['Test'][2], career_df['ODI'][2], career_df['FC'][2], career_df['T20I'][2]]
