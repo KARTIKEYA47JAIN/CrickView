@@ -234,6 +234,9 @@ def Pie_Match_Played():
     elif 'LA' in career_df:
         values = [career_df['Test'][0], career_df['ODI'][0], career_df['FC'][0], career_df['LA'][0]]
         labels = ['Test', 'ODI', 'FC', 'LA']
+    elif 'IPL' in career_df:
+        values = [career_df['Test'][0], career_df['ODI'][0], career_df['T20I'][0], career_df['IPL'][0]]
+        labels = ['Test', 'ODI', 'FC', 'LA']
     else:
         values = [career_df['Test'][0], career_df['ODI'][0], career_df['FC'][0], career_df['T20I'][0]]
         labels = ['Test', 'ODI', 'FC', 'T20I']
