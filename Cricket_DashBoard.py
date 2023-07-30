@@ -418,7 +418,7 @@ def Catch_Stumpings():
     catch = []
     stumpings = []
     not_played = 'Not Played'  # New value for the "-" entries
-    special_chars = ['-', '–', '-']
+    special_chars = ['-', '–']
 
     def convert_to_int_or_not_played(value):
     if value in special_chars:
