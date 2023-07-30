@@ -518,7 +518,7 @@ with st.sidebar:
     if nationality == 'India':
         player_name = st.radio(
             "Player Name",
-            options=['MS_Dhoni', 'Sachin_Tendulkar', 'Virat_Kohli', 'Rahul_Dravid', 'Sourav_Ganguly', 'Virender_Sehwag',
+            options=['MS_Dhoni', 'Sachin_Tendulkar', 'Rahul_Dravid', 'Sourav_Ganguly', 'Virender_Sehwag',
                      'Sunil_Gavaskar', 'VVS_Laxman', 'Mohammad_Azharuddin', 'Ravichandran_Ashwin',
                      'Rohit_Sharma', 'Cheteshwar_Pujara', 'Ravindra_Jadeja', 'Ravi_Shastri',
                      'Anil_Kumble', 'Irfan_Pathan']
