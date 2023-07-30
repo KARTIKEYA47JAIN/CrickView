@@ -429,7 +429,7 @@ def Catch_Stumpings():
             stumpings.append({'format': format_name, 'stumpings': catch_stumpings[1]})
             
             try:
-            catches = [int(item['catch']) for item in catch]
+                catches = [int(item['catch']) for item in catch]
             except ValueError:
                 catches = [not_played if item['catch'] == special_char else item['catch'] for item in catch]
             
@@ -447,7 +447,7 @@ def Catch_Stumpings():
             stumpings.append({'format': format_name, 'stumpings': catch_stumpings[1]})
             
             try:
-            catches = [int(item['catch']) for item in catch]
+                catches = [int(item['catch']) for item in catch]
             except ValueError:
                 catches = [not_played if item['catch'] == special_char else item['catch'] for item in catch]
             
@@ -465,7 +465,7 @@ def Catch_Stumpings():
             stumpings.append({'format': format_name, 'stumpings': catch_stumpings[1]})
             
             try:
-            catches = [int(item['catch']) for item in catch]
+                catches = [int(item['catch']) for item in catch]
             except ValueError:
                 catches = [not_played if item['catch'] == special_char else item['catch'] for item in catch]
             
@@ -483,7 +483,7 @@ def Catch_Stumpings():
             stumpings.append({'format': format_name, 'stumpings': catch_stumpings[1]})
             
             try:
-            catches = [int(item['catch']) for item in catch]
+                catches = [int(item['catch']) for item in catch]
             except ValueError:
                 catches = [not_played if item['catch'] == special_char else item['catch'] for item in catch]
             
