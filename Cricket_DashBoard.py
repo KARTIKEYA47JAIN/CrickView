@@ -418,7 +418,7 @@ def Catch_Stumpings():
     catch = []
     stumpings = []
     not_played = 'Not Played'  # New value for the "-" entries
-    special_char = '–'
+    special_char = '-'
     career_df = Career()
     if 'T20' in career_df:
         labels = ['Test', 'ODI', 'T20', 'T20I']
